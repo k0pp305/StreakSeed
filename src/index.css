@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Use your accent color for all focus rings */
+:focus {
+  --tw-ring-color: theme('colors.accent.400') !important;
+}
+
+/* Dark-mode tweaks for prose plugin */
+@layer components {
+  .prose-dark {
+    --tw-prose-body: #d1d5db;
+    --tw-prose-headings: #f9fafb;
+    --tw-prose-links: #67e8f9;
+    --tw-prose-bold: #f9fafb;
+    --tw-prose-counters: #9ca3af;
+    --tw-prose-bullets: #9ca3af;
+    --tw-prose-hr: #374151;
+    --tw-prose-quotes: #f3f4f6;
+    --tw-prose-captions: #9ca3af;
+    --tw-prose-code: #22d3ee;
+    --tw-prose-pre-bg: #1f2937;
+  }
+}

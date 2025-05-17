@@ -1,0 +1,18 @@
+/* 
+  # Prevent framing (clickjacking)
+  X-Frame-Options: DENY
+
+  # Basic XSS protection
+  X-XSS-Protection: 1; mode=block
+
+  # Only send referrer for same-origin
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # A basic CSP—tune as needed for your Firebase endpoints
+  Content-Security-Policy: default-src 'self'; \
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.gstatic.com; \
+    style-src 'self' 'unsafe-inline'; \
+    img-src 'self' data:; \
+    connect-src 'self' https://firestore.googleapis.com https://*.firebaseio.com https://*.googleapis.com; \
+    frame-src 'none'; \
+    form-action 'self';
