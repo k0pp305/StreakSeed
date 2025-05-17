@@ -1,30 +1,26 @@
 // tailwind.config.cjs
-module.exports = {
-  // use ONLY the "class" strategy—media will be handled in JS instead
-  darkMode: 'class',
 
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  // ← Enable toggling dark mode via the `.dark` class
+  darkMode: 'class',
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
   ],
-
   theme: {
     extend: {
       colors: {
-        primaryLight: '#f7f9fc',
-        headerGradient: 'linear-gradient(90deg,#4f46e5,#3b82f6)',
+        primaryLight: '#f5f7fa',
+        headerGradient: 'linear-gradient(to right, #0f2027, #203a43, #2c5364)',
         accent: {
           400: '#34d399',
-          600: '#10b981',
+          600: '#059669',
         },
-      },
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'],
       },
     },
   },
-
   plugins: [
-    require('@tailwindcss/typography'),
+    // (any other plugins you use, e.g. forms, aspect-ratio)
   ],
 };
